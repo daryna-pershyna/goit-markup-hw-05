@@ -64,7 +64,7 @@
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <button type="button" class="btn btn-main pointer">Заказать услугу</button>
+          <button data-modal-open type="button" class="btn btn-main pointer">Заказать услугу</button>
         </div>
       </section>
 
@@ -74,44 +74,24 @@
           <h2 class="visually-hidden benefits-title">Преимущества компании</h2>
           <ul class="list benefit-list">
             <li class="benefit-item">
-              <!-- <div class="for-icon">
-                <svg class="benefit-icon" width="70" height="70">
-                  <use href="./images/sprite.svg#icon-antenna"></use>
-                </svg>
-              </div> -->
               <h3 class="benefit-title">Внимание к деталям</h3>
               <p class="benefit-text">
                 Идейные соображения, а также начало повседневной работы по формированию позиции.
               </p>
             </li>
             <li class="benefit-item">
-              <!-- <div class="for-icon">
-                <svg class="benefit-icon" width="70" height="70">
-                  <use href="./images/sprite.svg#icon-clock"></use>
-                </svg>
-              </div> -->
               <h3 class="benefit-title">Пунктуальность</h3>
               <p class="benefit-text">
                 Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
               </p>
             </li>
             <li class="benefit-item">
-              <!-- <div class="for-icon">
-                <svg class="benefit-icon" width="70" height="70">
-                  <use href="./images/sprite.svg#icon-diagram"></use>
-                </svg>
-              </div> -->
               <h3 class="benefit-title">Планирование</h3>
               <p class="benefit-text">
                 Равным образом консультация с широким активом в значительной степени обуславливает.
               </p>
             </li>
             <li class="benefit-item">
-              <!-- <div class="for-icon">
-                <svg class="benefit-icon" width="70" height="70">
-                  <use href="./images/sprite.svg#icon-astronaut"></use>
-                </svg>
-              </div> -->
               <h3 class="benefit-title">Современные технологии</h3>
               <p class="benefit-text">
                 Значимость этих проблем настолько очевидна, что реализация плановых заданий.
@@ -128,12 +108,15 @@
           <ul class="skills-list list">
             <li class="skills-item">
               <img class="img" src="./images/box1.jpg" alt="планшет на столе" width="370" />
+              <h3 class="skill-title">Десктопные приложения</h3>
             </li>
             <li class="skills-item">
               <img class="img" src="./images/box2.jpg" alt="телефон в руке" width="370" />
+              <h3 class="skill-title">Мобильные приложения</h3>
             </li>
             <li class="skills-item">
               <img class="img" src="./images/box3.jpg" alt="спектр цветов" width="370" />
+              <h3 class="skill-title">Дизайнерские решения</h3>
             </li>
           </ul>
         </div>
@@ -456,5 +439,11 @@
         </div>
       </div>
     </footer>
+    <div data-modal  class="backdrop is-hidden">
+      <div class="modal">
+        <button data-modal-close type="button" class="btn-close"><svg class="client-icon" width="30" height="30"><use href="./images/sprite.svg#icon-close"></use></svg></button>
+      </div>
+    </div>
+     <script src="./js/modal.js"></script>
   </body>
 </html>
