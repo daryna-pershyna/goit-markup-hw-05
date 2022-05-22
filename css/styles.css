@@ -8,7 +8,6 @@
     --accent-bg-cl: #2F303A;
     --icons-fill: rgba(175, 177, 184, 1);
     --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    --time: opacity 250ms;
 }
 
 
@@ -132,7 +131,7 @@ ul,ol {
     border-radius: 2px;
     background-color: var(--accent-cl);
     opacity: 0;
-    transition: var(--time) var(--timing-function);
+    transition: opacity 250ms var(--timing-function);
     
 }
 .nav-link:hover::after,
@@ -378,7 +377,7 @@ ul,ol {
     border: 1px solid var(--icons-fill);
     border-radius: 4px;
     fill: var(--icons-fill);
-    transition: border 250ms, fill 250ms var(--timing-function);
+    transition: border 250ms var(--timing-function), fill 250ms var(--timing-function);
 }
 .client-link:hover,
 .client-link:focus {
@@ -493,8 +492,7 @@ ul,ol {
     text-align: center;
     padding: 6px 22px;
     box-shadow: none;
-    transition: box-shadow 250ms var(--timing-function);
-    transition: background-color 250ms, color 250ms var(--timing-function);
+    transition: background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function), color 250ms var(--timing-function);
 }
 .btn-filter:hover,
 .btn-filter:focus {
@@ -508,7 +506,7 @@ ul,ol {
     top: 0;
     left: 0;
     opacity: 1;
-    transition: opacity 250ms var(--timing-function);
+    transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
 }
 .backdrop.is-hidden {
     opacity: 0;
@@ -599,20 +597,17 @@ ul,ol {
     top: 0;
     opacity: 0;
     transform: translateY(100%);
-    transition: opacity 250ms, transform 250ms var(--timing-function);
+    transition: opacity 250ms var(--timing-function), transform 250ms var(--timing-function);
 }
-
-.activities-item:focus .activiti-about,
-.activities-item:hover .activiti-about {
+.activities-link:focus .activiti-about,
+.activities-link:hover .activiti-about {
     transform: translateY(0);
     opacity: 1;
 }
-
 .activities-card {
     padding: 20px 24px;
     border: 1px solid rgba(238, 238, 238, 1);
     border-top: none;
-    
 }    
 .activities-example-title { 
     color: var(--title-txt-cl);
